@@ -4,6 +4,16 @@ function computeskala(){
     var code = encrypt(number, passwort);    
     document.getElementById("textfield").value = code ;
   }
+
+function toclip(){
+    const textarea = document.getElementById("textfield");
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    document.execCommand('copy'); //deprecated :(
+    document.body.removeChild(textarea);
+
+
+}
   function decryptskala(){
       var code = document.getElementById("textfield-decrypt");
       var password = document.getElementById("pw-decrypt");
