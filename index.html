@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skala!</title>
+  </head>
+  <body>
+    Remote Skala spielen:<br> Spieler 1 nutzt den oberen Teil der Website. Er legt die Zahl und das Passwort fest, <br> 
+    und schickt dann als Beweis den Code an Spieler 1, sodass die Zahl unveränderbar ist.<br> Spieler 2 legt dann seine Zahl fest und teilt diese direkt Spieler 1 mit. <br>
+    Dann erst verrät Spieler 1 das passwort an Spieler 2. Spieler 2 kann jetzt mit dem unteren Teil der Website die Zahl von Spieler 1 in Erfahrung bringen.<br><br><br><hr><br><br>
+    <center>
+        
+        Zahl:
+        <input id="skalanumber" type="number" autocomplete="off"><br><br>
+        Passwort:
+        <input id="salt" type="password" autocomplete="off"><br><br>
+        
+        <input type="submit" value="Code generieren" onclick = "computeskala()"><br>
+    
+    <textarea id="textfield" autocomplete="off"></textarea>
+    <br><br><br><br><hr><br><br><br><br>
+Entschlüsseln: Code einfügen und passwort eingeben:<br><br>
+    verify:<br><br>
+    code:<textarea id="textfield-decrypt" autocomplete="off"></textarea><br><br>
+    passwort:<input id="pw-decrypt" type="password" autocomplete="off"><br><br>
+    <input type="submit" value="Entschlüsseln" onclick = "decryptskala()"><br>
+    zahl war:<input readonly id="zahl-decrypt" type="number" autocomplete="off"><br><br>
+        
+
+    </center>
+  </body>
+  <script src="scripts/aes.js"></script>
+  <script src="scripts/sha256.js"></script>
+  <script src="scripts/skala.js">
+      
+  </script>
+</html>
