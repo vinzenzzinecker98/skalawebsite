@@ -8,6 +8,10 @@ function CopyMe(TextToCopy) {
     document.body.removeChild(TempText);
     
   }
+function getmypw(){
+    var pw = document.getElementById('salt').value;
+    CopyMe(pw);
+}
 function computeskala(){
     var number = document.getElementById('skalanumber').value;
     var passwort = document.getElementById("salt").value;
