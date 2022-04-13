@@ -3,7 +3,7 @@ function computeskala(){
     var passwort = document.getElementById("salt").value;
     var code = encrypt(number, passwort);
     var website = "https://vinzenzzinecker98.github.io/skalawebsite/?code=";
-    website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/index.html?code=";
+    //website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/index.html?code=";
     document.getElementById("textfield").value = website + code ;
   }
 window.onload = function () {
