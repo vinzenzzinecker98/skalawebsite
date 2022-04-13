@@ -1,18 +1,33 @@
 function computeskala(){
     var number = document.getElementById('skalanumber').value;
     var passwort = document.getElementById("salt").value;
-    var code = encrypt(number, passwort);    
-    document.getElementById("textfield").value = code ;
+    var code = encrypt(number, passwort);
+    var website = "https://vinzenzzinecker98.github.io/skalawebsite/?code=";
+    website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/index.html?code=";
+    document.getElementById("textfield").value = website + code ;
   }
-
+window.onload = function () {
+    code = findGetParameter("code");
+    document.getElementById("textfield-decrypt").value=code
+}
+function findGetParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+}
 function toclip(){
     const textarea = document.getElementById("textfield");
     textarea.select();
     textarea.setSelectionRange(0, 99999);
     document.execCommand('copy'); //deprecated :(
     document.body.removeChild(textarea);
-
-
 }
   function decryptskala(){
       var code = document.getElementById("textfield-decrypt");
