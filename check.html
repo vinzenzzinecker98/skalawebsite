@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Skala!</title>
+  </head>
+  <body>
+    <center>
+    Entschlüsseln: Passwort eingeben:<br><br>
+    
+    <textarea id="textfield-decrypt" autocomplete="off" style="display: none;"></textarea><br><br>
+
+    passwort:<input id="pw-decrypt" type="password" autocomplete="new-password"><br><br>
+    <input type="submit" value="Entschlüsseln" onclick = "decryptskala()"><br>
+    <br><br>
+    zahl war:<input readonly id="zahl-decrypt" type="number" autocomplete="off"><br><br>
+    
+      <a href="./index.html">Neue Skala!</a>
+    </center>
+  </body>
+  <script src="scripts/aes.js"></script>
+  <script src="scripts/sha256.js"></script>
+  <script src="scripts/skala.js">
+     </script>
+
+
+</html>

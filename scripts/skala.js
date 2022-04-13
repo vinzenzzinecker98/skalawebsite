@@ -1,16 +1,23 @@
-
+function CopyMe(TextToCopy) {
+    var TempText = document.createElement("input");
+    TempText.value = TextToCopy;
+    document.body.appendChild(TempText);
+    TempText.select();
+    
+    document.execCommand("copy");
+    document.body.removeChild(TempText);
+    
+  }
 function computeskala(){
     var number = document.getElementById('skalanumber').value;
     var passwort = document.getElementById("salt").value;
     var code = encrypt(number, passwort);
-    var website = "https://vinzenzzinecker98.github.io/skalawebsite/?code=";
-    //website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/index.html?code=";
-    document.getElementById("textfield").value = website + code ;
+    var website = "https://vinzenzzinecker98.github.io/skalawebsite/check.html?code=";
+    website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/check.html?code=";
+    link = website + code ;
+    CopyMe(link)
   }
-window.onload = function () {
-    code = findGetParameter("code");
-    document.getElementById("textfield-decrypt").value=code
-}
+
 function findGetParameter(parameterName) {
     var result = null,
         tmp = [];
@@ -23,15 +30,9 @@ function findGetParameter(parameterName) {
         });
     return result;
 }
-function toclip(){
-    const textarea = document.getElementById("textfield");
-    textarea.select();
-    textarea.setSelectionRange(0, 99999);
-    document.execCommand('copy'); //deprecated :(
-    document.body.removeChild(textarea);
-}
+
   function decryptskala(){
-      var code = document.getElementById("textfield-decrypt");
+      var code = findGetParameter("code");
       var password = document.getElementById("pw-decrypt");
       var decrypted = decrypt(code, password);
       document.getElementById("zahl-decrypt").value=decrypted;
@@ -46,7 +47,6 @@ function toclip(){
   }
 
   function decrypt(code, passwort){
-      code=code.value;
       passwort=passwort.value;
       var pws = code.substring(0, 80); //alert (pws); 	// 80 zeichen hash+salt
       var pw_h2 = pws.substring(0, 64); //alert("hash: "+pw_h2); 		// Übermittelter Hash (aus Passwort + Salt)
