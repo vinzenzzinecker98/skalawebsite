@@ -6,6 +6,7 @@ function CopyMe(TextToCopy) {
     
     document.execCommand("copy");
     document.body.removeChild(TempText);
+    alert("Kopierter Text: "+ TextToCopy); //Alört
     
   }
 function getmypw(){
