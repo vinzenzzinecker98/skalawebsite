@@ -17,7 +17,7 @@ function computeskala(){
     var passwort = document.getElementById("salt").value;
     var code = encrypt(number, passwort);
     var website = "https://vinzenzzinecker98.github.io/skalawebsite/check.html?code=";
-    website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/check.html?code=";
+    //website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/check.html?code=";
     link = website + code ;
     CopyMe(link)
   }
