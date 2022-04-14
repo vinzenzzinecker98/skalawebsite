@@ -3,19 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/ysoftaoglu/GradientButtons/master/gradient-buttons/gradient-buttons.min.css"/>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/fields.css">
     <title>Check Skala!</title>
   </head>
   <body>
     <center>
-    Entschlüsseln: Passwort eingeben:<br><br>
+    <br><br><br>
     
-    passwort:<input id="pw-decrypt" type="password" autocomplete="new-password"><br><br>
-    <input type="submit" value="Entschlüsseln" onclick = "decryptskala()"><br>
+    <label class="input">
+      <input id="pw-decrypt" class="input__field" type="text" placeholder=" " />
+      <span class="input__label">Passwort eingeben
+      </span>
+    </label>
+    <br><br><br>
+    <button class="g-btn g-btn--light-blue has-border radius-sm" onclick = "decryptskala()">Zahl erfahren<i class="fa fa-check g-btn__right-icon"></i></button><br><br>
+ 
+    <br><br><br>
+   
+    <label class="input">
+      <input id="zahl-decrypt" class="input__field" type="text" placeholder=" " />
+      <span class="input__label">Die Zahl war:
+      </span>
+    </label>
     <br><br>
-    zahl war:<input readonly id="zahl-decrypt" type="number" autocomplete="off"><br><br>
-    
-      <a href="./index.html">Neue Skala!</a>
+    <a class="g-btn g-btn--white has-border radius-sm" href="./index.html">Neue Skala!</a>
+        
+      
     </center>
   </body>
   <script src="scripts/aes.js"></script>
