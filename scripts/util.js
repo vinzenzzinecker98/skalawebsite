@@ -6,8 +6,7 @@ function CopyMe(TextToCopy) {
     TempText.select();
     
     document.execCommand("copy");
-    document.body.removeChild(TempText);
-    alert("Kopierter Text: "+ TextToCopy); //Alört
+    document.body.removeChild(TempText);   
     
   }
 

@@ -10,6 +10,7 @@ document.addEventListener('input', e => {
     }, 100)
   }
 })
+
 function getmypw(){
     var pw = document.getElementById('chosenpw').value;
     CopyMe(pw);
@@ -21,14 +22,21 @@ function computeskala(){
     var website = "https://vinzenzzinecker98.github.io/skalawebsite/check.html?code=";
     //website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/check.html?code=";
     link = website + code ;
-    CopyMe(link)
+    CopyMe(link);
+    alert("Link kopiert");
   }
 
   function decryptskala(){
       var code = findGetParameter("code");
+      if(code == null){
+        alert("Kein Code erkannt!");
+        location.href='https://vinzenzzinecker98.github.io/skalawebsite/';
+      }
+      else{
       var password = document.getElementById("pw-decrypt");
       var decrypted = decrypt(code, password);
       document.getElementById("zahl-decrypt").value=decrypted;
+      }
   }
 
   function encrypt (number, passwort){
@@ -60,7 +68,7 @@ function computeskala(){
               var decrypted = CryptoJS.AES.decrypt(encrypted, String(pw)) // entschlüsseln
 
               decrypted = decrypted.toString(CryptoJS.enc.Utf8);
-              alert("Die Zahl ist: " + decrypted)
+              alert("Die Zahl war: " + decrypted)
               return decrypted;                
           }            
   }
