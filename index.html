@@ -16,8 +16,11 @@
     1) Zahl festlegen und geheimes passwort aussuchen<br>
     2) Link an zweiten Spieler schicken<br>
     3) Zweiter Spieler verrät seine Zahl direkt<br>
-    4) Erster Spieler verrät das Passwort, damit kann Spieler 2 über den Link die Zahl überprüfen<br><br><br><br>
+    4) Erster Spieler verrät das Passwort, damit kann Spieler 2 über den Link die Zahl überprüfen<br><br>
     <center>
+      <div class="card">
+        
+      
         <label class="input">
           <input id="skalanumber" class="input__field" type="text" placeholder=" " />
           <span class="input__label">Bitte Zahl wählen
@@ -31,12 +34,12 @@
         </label>
         <br><br><br>
         
-        <button class="g-btn g-btn--light-blue has-border radius-sm" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
+        <button class="g-btn g-btn--light-blue has-border radius-sm u-block" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
         <br><br>
 
         
-        <button class="g-btn g-btn--white has-border radius-sm" onclick = "getmypw()">Mein Passwort in Zwischenablage kopieren</button><br> 
-        
+        <button class="g-btn g-btn--white has-border radius-sm u-block" onclick = "getmypw()">Mein Passwort in Zwischenablage kopieren</button><br> 
+      </div>
     </center>
   </body>
   <script src="scripts/aes.js"></script>
