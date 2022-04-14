@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skala!</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/ysoftaoglu/GradientButtons/master/gradient-buttons/gradient-buttons.min.css"/>
   </head>
   <body>
     <input name="disable-pwd-mgr-1" type="password" id="disable-pwd-mgr-1" style="display: none;" value="disable-pwd-mgr-1" />
@@ -21,14 +22,12 @@
         Passwort:
         <input id="salt" type="password" autocomplete="new-password"><br><br>
         
-        <input type="submit" value="Link in Zwischenablage kopieren" onclick = "computeskala()"><br><br>
+        <button class="g-btn g-btn--dark-green" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
         <br><br>
 
         mein passwort kopieren:
         <input type="submit" value="Mein Passwort in Zwischenablage kopieren" onclick = "getmypw()"><br> 
         <br><hr><br>    
-        
-
     </center>
   </body>
   <script src="scripts/aes.js"></script>
