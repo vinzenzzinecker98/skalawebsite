@@ -1,11 +1,22 @@
+let timer;
 
+document.addEventListener('input', e => {
+  const el = e.target;
+  
+  if( el.matches('[data-color]') ) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      document.documentElement.style.setProperty(`--color-${el.dataset.color}`, el.value);
+    }, 100)
+  }
+})
 function getmypw(){
-    var pw = document.getElementById('salt').value;
+    var pw = document.getElementById('chosenpw').value;
     CopyMe(pw);
 }
 function computeskala(){
     var number = document.getElementById('skalanumber').value;
-    var passwort = document.getElementById("salt").value;
+    var passwort = document.getElementById("chosenpw").value;
     var code = encrypt(number, passwort);
     var website = "https://vinzenzzinecker98.github.io/skalawebsite/check.html?code=";
     //website = "file:///C:/Users/Lenovo/OneDrive/Dokumente/skala/check.html?code=";

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skala!</title>
     <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/ysoftaoglu/GradientButtons/master/gradient-buttons/gradient-buttons.min.css"/>
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/fields.css">
   </head>
   <body>
     <input name="disable-pwd-mgr-1" type="password" id="disable-pwd-mgr-1" style="display: none;" value="disable-pwd-mgr-1" />
@@ -15,18 +16,27 @@
     1) Zahl festlegen und geheimes passwort aussuchen<br>
     2) Link an zweiten Spieler schicken<br>
     3) Zweiter Spieler verrät seine Zahl direkt<br>
-    4) Erster Spieler verrät das Passwort, damit kann Spieler 2 über den Link die Zahl überprüfen<br><hr><br>
+    4) Erster Spieler verrät das Passwort, damit kann Spieler 2 über den Link die Zahl überprüfen<br><br><br><br>
     <center>
-        Zahl:
-        <input id="skalanumber" type="number" autocomplete="new-password"><br><br>
-        Passwort:
-        <input id="salt" type="password" autocomplete="new-password"><br><br>
+       
+        <label class="input">
+          <input id="skalanumber" class="input__field" type="text" placeholder=" " />
+          <span class="input__label">Bitte Zahl wählen
+          </span>
+        </label>
+<br><br><br><br>
+        <label class="input">
+          <input id="chosenpw" class="input__field" type="password" placeholder=" " />
+          <span class="input__label">Bitte Passwort festlegen
+          </span>
+        </label>
+        <br><br><br>
         
-        <button class="g-btn g-btn--dark-green" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
+        <button class="g-btn g-btn--light-blue has-border radius-sm" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
         <br><br>
 
-        mein passwort kopieren:
-        <input type="submit" value="Mein Passwort in Zwischenablage kopieren" onclick = "getmypw()"><br> 
+        
+        <button class="g-btn g-btn--white has-border radius-sm" onclick = "getmypw()">Mein Passwort in Zwischenablage kopieren</button><br> 
         <br><hr><br>    
     </center>
   </body>
@@ -34,4 +44,5 @@
   <script src="scripts/sha256.js"></script>
   <script src="scripts/skala.js"> </script>
   <script src="scripts/util.js"> </script>
+  
 </html>
