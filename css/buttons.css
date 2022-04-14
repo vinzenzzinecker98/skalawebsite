@@ -7,3 +7,9 @@ a.button {
     text-decoration: none;
     color: initial;
 }
+.footer{ 
+    position: fixed;     
+    text-align: center;    
+    bottom: 0px; 
+    width: 100%;
+} 
