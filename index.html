@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,40 +9,36 @@
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="./css/fields.css">
   </head>
+
   <body>
     <input name="disable-pwd-mgr-1" type="password" id="disable-pwd-mgr-1" style="display: none;" value="disable-pwd-mgr-1" />
     <input name="disable-pwd-mgr-2" type="password" id="disable-pwd-mgr-2" style="display: none;" value="disable-pwd-mgr-2" />
     <input name="disable-pwd-mgr-3" type="password" id="disable-pwd-mgr-3" style="display: none;" value="disable-pwd-mgr-3" />
     <h1><img src="favicon.ico"><img src="2.ico"><img src="3.ico"> Skala! </h1>
+    
     How to Skala:<br>
     1) Zahl festlegen und geheimes passwort aussuchen<br>
     2) Link an zweiten Spieler schicken<br>
     3) Zweiter Spieler verrät seine Zahl direkt<br>
     4) Erster Spieler verrät das Passwort, damit kann Spieler 2 über den Link die Zahl überprüfen<br><br>
-    <center>
-      <div class="card">
-        
-      
+    
+      <div class="card">      
         <label class="input">
           <input autocomplete="off" style="text-align:center;" id="skalanumber" class="input__field" type="text" placeholder=" " />
           <span class="input__label">Bitte Zahl wählen
           </span>
-        </label>
-<br><br>
+        </label><br><br>
+
         <label class="input">
           <input autocomplete="off" style="text-align:center;" id="chosenpw" class="input__field" type="text" placeholder=" " />
           <span class="input__label">Bitte Passwort festlegen
           </span>
-        </label>
-        <br><br>
+        </label><br><br>
         
         <button id="computebutton" class="g-btn g-btn--light-blue has-border radius-sm u-block u-x-large" onclick = "computeskala()">Link in Zwischenablage kopieren <i class="fa fa-check g-btn__right-icon"></i></button><br><br>
-        
-
-        
+                
         <button class="g-btn g-btn--white has-border radius-sm u-block u-x-large" onclick = "getmypw()">Mein Passwort in Zwischenablage kopieren</button><br> 
-      </div>
-    </center>
+      </div>    
     <br>
     <div class="footer"> <a href="https://github.com/vinzenzzinecker98/skalawebsite">Sourcecode</a></div>
   </body>

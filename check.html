@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+  
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,18 @@
     <link rel="stylesheet" href="./css/fields.css">
     <title>Check Skala!</title>
   </head>
-  <body>
-    
-    <h1><img src="favicon.ico"><img src="2.ico"><img src="3.ico"> Skala! </h1>
-      <center>
-    
-    <div class="card card">
+
+  <body>    
+  <h1><img src="favicon.ico"><img src="2.ico"><img src="3.ico"> Skala! </h1>
+  <div class="card card">
     <label class="input">
       <input autocomplete="off" id="pw-decrypt" style="text-align:center;" class="input__field" type="text" placeholder=" " />
       <span class="input__label">Passwort eingeben
       </span>
     </label>
     <br><br><br>
-    <button class="g-btn g-btn--light-blue has-border radius-sm u-block u-x-large" onclick = "decryptskala()">Zahl erfahren<i class="fa fa-check g-btn__right-icon"></i></button><br><br>
- 
-    <br><br><br>
-   
+    <button class="g-btn g-btn--light-blue has-border radius-sm u-block u-x-large" onclick = "decryptskala()">Zahl erfahren<i class="fa fa-check g-btn__right-icon"></i></button><br><br> 
+    <br><br><br>   
     <label class="input">
       <input autocomplete="off" id="zahl-decrypt" class="input__field" style="text-align:center;" type="text" placeholder="" readonly />
       <span class="input__label">Die Zahl war:
@@ -33,14 +30,12 @@
     <button class="g-btn g-btn--white has-border radius-sm u-block u-x-large" onclick ="location.href='https://vinzenzzinecker98.github.io/skalawebsite/'">Neue Skala</button>
     <br>
   </div>
-      
-    </center>
   </body>
+
   <script src="scripts/aes.js"></script>
   <script src="scripts/sha256.js"></script>
-  <script src="scripts/skala.js">
-     </script>
-     <script src="scripts/util.js"> </script>
+  <script src="scripts/skala.js"></script>
+  <script src="scripts/util.js"> </script>
 
 
 </html>
