@@ -11,6 +11,22 @@ document.addEventListener('input', e => {
   }
 })
 
+function readclipboard(){  
+  try{
+  navigator.clipboard.readText()
+  .then(text => {
+    document.getElementById("pw-decrypt").value = text;    
+  })
+  .catch(err => {
+    
+    alert('Berechtigung nicht erteilt');
+  });
+}
+catch(e){
+  alert("Nicht unterstützt vom aktuellen Browser");
+}  
+}
+
 function getmypw(){
     var pw = document.getElementById('chosenpw').value;
     CopyMe(pw);
